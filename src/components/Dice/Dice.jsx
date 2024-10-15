@@ -22,14 +22,4 @@ const Dice = ({number}) => {
     }
 }
 
-// const Dice = ({number}) => {
-//   return (
-//     <div className={styles["dice"]}>
-//         {/* <FaDiceOne className={styles["dice__svg"]}/> */}
-
-//         {showDiceNumberSvg()}
-//     </div>
-//   )
-// }
-
 export default Dice
