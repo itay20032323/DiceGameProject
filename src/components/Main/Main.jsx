@@ -5,7 +5,7 @@ import { FaPlus } from "react-icons/fa6";
 import { PiBoxArrowDown } from "react-icons/pi";
 import Dice from '../Dice/Dice';
 
-const Main = ({setPlayersScores, playerTurn, setPlayerTurn}) => {
+const Main = ({setPlayersScores, playerTurn, setPlayerTurn, setPlayersWins}) => {
   
   const [diceNumbers, setDiceNumbers] = useState([0,0])
   const [finalScore, setFinalScore] = useState(100);
@@ -76,8 +76,20 @@ const Main = ({setPlayersScores, playerTurn, setPlayerTurn}) => {
 
   const checkIfSomeWinner = (newScores) => {
     if(newScores[1].totalScore >= finalScore){
+      setPlayersWins((prev) => {
+        const newPlayersWins = { ...prev };
+        newPlayersWins[1] = newPlayersWins[1] + 1;
+        localStorage.setItem("playerOneWins", newPlayersWins[1]);
+        return newPlayersWins;
+      })
       alert("Player 1 is the Winner !")
     } else if (newScores[2].totalScore >= finalScore){
+      setPlayersWins((prev) => {
+        const newPlayersWins = { ...prev };
+        newPlayersWins[2] = newPlayersWins[2] + 1;
+        localStorage.setItem("playerTwoWins", newPlayersWins[2]);
+        return newPlayersWins;
+      })
       alert("Player 2 is the Winner !")
     } else {
       return;
