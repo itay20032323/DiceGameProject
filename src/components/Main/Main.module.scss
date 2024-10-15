@@ -1,0 +1,33 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+
+    .button-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+        width: 10rem;
+        height: 1.5rem;
+        cursor: pointer;
+    }
+    
+    input[type="number"] {
+        font-size: 1rem;
+        padding: 0.6rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .new-game{
+        margin: 4vh 0 15vh 0;
+    }
+
+    .roll-dice{
+        margin-top: 7vh;
+    }
+}
+

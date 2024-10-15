@@ -1,0 +1,11 @@
+@import '../../styles/colors';
+
+.dice{
+
+
+    &__svg{
+        width: 18vh;
+        height: 18vh;
+        color: $secondary-color;
+    }
+}
